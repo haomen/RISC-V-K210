@@ -12,6 +12,6 @@ sudo usermod -a -G dialout $(whoami)
 sudo python3 -m pip install kflash
 su $(whoami)
 
-kflash -B dan -b 3000000 -p /dev/ttyUSB0 arch/riscv/boot/loader.bin
+kflash -B dan -b 3000000 -p /dev/ttyUSB0 linux-image/loader.bin
 python3 -m serial.tools.miniterm --raw --filter colorize /dev/ttyUSB0 115200
 ```
